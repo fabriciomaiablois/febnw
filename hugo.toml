@@ -1,0 +1,7 @@
+baseURL = 'https://flaviaebrunonowacken.com/'
+languageCode = 'en-us'
+title = 'FEBNW'
+theme = 'febnw'
+
+[params]
+sitedescription = 'FEBNW'
