@@ -1,39 +1,65 @@
 @use "utils/variables" as v;
 
 body {
-  font-family: v.$fontParagraph;
-  color: v.$white;
-  background-color: v.$backgroundDark;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    font-family: v.$fontParagraph;
+    color: v.$white;
+    background-color: v.$backgroundDark;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a {
-  @include v.primary-color;
+     @include v.primary-color;
 }
 
 pre code {
-  font-family: v.$fontCode;
-  font-size: 75%;
-  display: block;
-  background: v.$backgroundDarker;
-  padding: 10px;
-  overflow: auto;
+     font-family: v.$fontCode;
+     font-size: 75%;
+     display: block;
+     background: v.$backgroundDarker;
+     padding: 10px;
+     overflow: auto;
 }
 
 code {
-  font-family: v.$fontCode;
-  font-size: 75%;
+    font-family: v.$fontCode;
+    font-size: 75%;
 }
 
 @for $i from 1 through 6 {
-  h#{$i} {
-    font-family: v.$fontHeader;
-  }
+    h#{$i} {
+        font-family: v.$fontHeader;
+    }
 }
 
 @-ms-viewport{
-  width: device-width;
+    width: device-width;
+}
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../landscape-shine.png");
+}
+
+.hero.rain {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../landscape-rain.png");
+}
+
+@media (orientation: portrait) {
+    .hero {
+        background-image: url("../../portrait-shine.png");
+    }
+
+    .hero.rain {
+        background-image: url("../../portrait-rain.png");
+    }
 }
